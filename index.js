@@ -13,8 +13,8 @@ app.use(cors({
 }))
 
 app.use(express.json());
-// dotenv.config();
-dotenv.config({path:__dirname+'/.env'});
+dotenv.config();
+
 
 const port = process.env.PORT || 5000;
 
@@ -31,6 +31,7 @@ mongoose
 app.listen(port, () => {
   console.log("success creating server");
 });
+
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
