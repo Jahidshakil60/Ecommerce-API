@@ -13,7 +13,8 @@ app.use(cors({
 }))
 
 app.use(express.json());
-dotenv.config();
+// dotenv.config();
+dotenv.config({path:__dirname+'/.env'});
 
 const port = process.env.PORT || 5000;
 
